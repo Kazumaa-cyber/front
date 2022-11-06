@@ -24,14 +24,16 @@
 
 # bugfix
 
-- [ ] header 的 border 没有撑开
-- [ ] header 没有吸顶
+- [ ✔️ ] header 的 border 没有撑开
+- [ ✔️ ] header 没有吸顶
   - 方案1: `position: sticky`
   - 方案2: `position: fixed + margin-top`
-- [ ] 背景点点没出来
-- [ ] footer 宽度没撑满
-- [ ] footer 跟上面内容的间距有时候不足
-- [ ] link 之间的点可以使用 `:before` 更优雅的实现
+- [ ✔️ ] 背景点点没出来
+- [ ✔️ ] footer 宽度没撑满
+- [ ✔️ ] footer 跟上面内容的间距有时候不足
+- [ ✔️ ] link 之间的点可以使用 `:before` 更优雅的实现
+- [ ✔️ ] #hover效果
+- [ ] 输入框还没好
 
 # 学习
 

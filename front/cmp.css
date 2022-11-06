@@ -5,13 +5,15 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-image: radial-gradient(#ddd 1px, transparent 0), radial-gradient(#ddd 1px, transparent 0);
+  background-size:50px 50px;
+  background-position: 0 0, 25px 25px;
 }
 
 .head_all {
   display: flex;
   justify-content: space-between;
   max-width: 1400px;
-  height: 80px;
+  height: 60px;
   margin: 0 auto;
 }
 
@@ -25,7 +27,20 @@ body {
   align-items: center;
   gap: 16px;
 }
-
+#search-kuang{
+  background-color: #00000008;
+  display: flex;
+  align-items: center;
+}
+#input-kuang{
+  background-color: rgb(0 0 0/.03);
+  font-size: 100%;
+  padding: 8px 12px 8px 12px;
+  border: 0 solid #e5e7eb;
+  background-color: rgb(0 0 0/.03);
+  border-radius: 0.5rem;
+  width: 220px;
+}
 
 .sum_content {
   display: flex;
@@ -40,6 +55,17 @@ body {
   padding-left: 2rem;
   padding-right: 2rem;
   max-width: 800px;
+}
+
+.jinhao-style{
+  color: #9CA3AF;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.jinhao-style :hover{
+  opacity: 1;
+  text-decoration: none;
 }
 
 .h2_line {
@@ -58,15 +84,20 @@ body {
   display: flex;
   width: auto;
 }
-#nav ul {
+
+#nav {
   list-style: none;
   padding: 0%;
   margin-top: 64px;
   margin-bottom: 80px;
 }
 
-#nav li {
-  display: inline;
+#nav > li {
+  display:inline;
+}
+
+#nav li + li::before{
+  content: '·';
 }
 
 .code_kuang {
@@ -102,6 +133,7 @@ body {
   margin-top: 8px;
 }
 
+
 .end_date {
   display: flex;
   align-items: center;
@@ -127,3 +159,5 @@ body {
   align-items: center;
   max-width: 1440px;
 }
+
+
