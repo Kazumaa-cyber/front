@@ -1,7 +1,7 @@
 html {
 }
 body {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   box-sizing: border-box;
   background-image: radial-gradient(#ddd 1px, transparent 0),
