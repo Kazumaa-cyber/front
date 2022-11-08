@@ -24,16 +24,18 @@
 
 # bugfix
 
-- [ ✔️ ] header 的 border 没有撑开
-- [ ✔️ ] header 没有吸顶
+- [x] header 的 border 没有撑开
+- [x] header 没有吸顶
   - 方案1: `position: sticky`
   - 方案2: `position: fixed + margin-top`
-- [ ✔️ ] 背景点点没出来
-- [ ✔️ ] footer 宽度没撑满
-- [ ✔️ ] footer 跟上面内容的间距有时候不足
-- [ ✔️ ] link 之间的点可以使用 `:before` 更优雅的实现
-- [ ✔️ ] #hover效果
-- [ ] 输入框还没好
+- [x] 背景点点没出来
+- [x] footer 宽度没撑满
+- [x] footer 跟上面内容的间距有时候不足
+- [x] link 之间的点可以使用 `:before` 更优雅的实现
+- [x] #hover效果
+- [ ] header 上的输入框还没好
+- [ ] 中间的 links(.nav) 的那些，要左右居中
+- [ ] header 的 title 在宽度不够的时候也不要换行
 
 # 学习
 
@@ -41,14 +43,39 @@
 - [ ] css 选择器
   - [https://blog.csdn.net/weixin_44691608/article/details/106603985](https://blog.csdn.net/weixin_44691608/article/details/106603985)
   - [ ] 掌握基础的伪选择器 `:hover, :active`
-- [ ] css 权重
+- [ ] css 权重（可选）
   - [https://blog.csdn.net/weixin_44691608/article/details/106649186](https://blog.csdn.net/weixin_44691608/article/details/106649186) 
+- [ ] position 定位
+  - relative、absolute、fixed 差异
+  - 之前用的 sticky 对比
 
 # 下一步
 
 之后要做的可以先看也可以先不看
 
+## 第一阶段：原生 JS
+
 - 学习
   - [ ] 使用 JS 创建与操作 dom 元素
+  - [ ] dom 相关 API 了解
 - 修改
   - [ ] 使用 for 循环生成列表项
+  - [ ] 使用 JS 动态调整样式
+  - [ ] 使用计时器实现打字机效果展现 title
+  - [ ] 初步理解 Component 概念
+
+## 第二阶段：React
+
+- 学习
+  - [ ] 了解 JS 基础语法
+  - [ ] 了解 ES6，重点了解 let、const、Array、Arrow Function
+  - [ ] 了解 React 基础语法：JSX、项目构建
+- 修改
+  - [ ] 使用 React 重写一次
+  - [ ] 进行 Component 的详细划分
+
+## 第三阶段：React Router
+
+加入路由
+
+
