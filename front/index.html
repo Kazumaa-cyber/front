@@ -12,8 +12,8 @@
       <div class="head_all">
         <div class="head_left">
           <img src="https://swc.rs/logo.png" style="width: 50px" />
-          <span style="font-weight: 800; margin: 0px 8px 0px 8px">SWC</span>
-          <span style="color: #4b5563; margin-right: 16px">Speedy Web Compiler</span>
+          <span style="font-weight: 800; margin: 0px 8px 0px 8px;min-width: 0px;">SWC</span>
+          <span style="color: #4b5563; margin-right: 16px;white-space: nowrap;overflow: hidden;min-width: 0px;">Speedy Web Compiler</span>
         </div>
         <div class="head_right">
           <div style="color: #6b7280">Docs</div>
@@ -26,7 +26,11 @@
               placeholder="Search documentation..."
               spellcheck="false"
             />
-            <div>/</div>
+            <div id="kuang">
+              <div>
+                /
+              </div>
+            </div>
           </div>
           <div>
             <a href="https://github.com/swc-project/swc">
@@ -82,8 +86,8 @@
             </p>
           </span>
         </div>
-        <div style="margin-top: 64px">
-          <ul id="nav">
+        <div style="margin-top: 64px;">
+          <ul id="nav" style="text-align: center;">
             <li>
               <a
                 href="https://swc.rs/docs/getting-started"

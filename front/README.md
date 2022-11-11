@@ -26,16 +26,16 @@
 
 - [x] header 的 border 没有撑开
 - [x] header 没有吸顶
-  - 方案1: `position: sticky`
-  - 方案2: `position: fixed + margin-top`
+  - 方案1: `position: sticky` `position: sticky;top:0;`
+  - 方案2: `position: fixed + margin-top` `position: fixed;width:100%;top:0;`
 - [x] 背景点点没出来
 - [x] footer 宽度没撑满
 - [x] footer 跟上面内容的间距有时候不足
 - [x] link 之间的点可以使用 `:before` 更优雅的实现
 - [x] #hover效果
-- [ ] header 上的输入框还没好
-- [ ] 中间的 links(.nav) 的那些，要左右居中
-- [ ] header 的 title 在宽度不够的时候也不要换行
+- [x] header 上的输入框还没好
+- [x] 中间的 links(.nav) 的那些，要左右居中
+- [x] header 的 title 在宽度不够的时候也不要换行
 
 # 学习
 

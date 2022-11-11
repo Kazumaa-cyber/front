@@ -21,26 +21,55 @@ body {
 .head_left {
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .head_right {
   display: flex;
   align-items: center;
   gap: 16px;
+  overflow: hidden;
 }
 #search-kuang {
-  background-color: #00000008;
   display: flex;
   align-items: center;
+  position: relative;
+  top:0;
+  left: 0;
 }
 #input-kuang {
   background-color: rgb(0 0 0/0.03);
   font-size: 100%;
+  width: 100%;
   padding: 8px 12px 8px 12px;
   border: 0 solid #e5e7eb;
-  background-color: rgb(0 0 0/0.03);
   border-radius: 0.5rem;
   width: 220px;
+  color: #6b7280;
+}
+
+#input-kuang:focus{
+  background-color: #fff;
+
+}
+
+#kuang{
+  display:flex;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#kuang div{
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e5e7eb;
+  padding-left: 7px;
+  padding-right: 7px;
+  color:  #6b7280;
+
 }
 
 .sum_content {
