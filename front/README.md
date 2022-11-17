@@ -56,17 +56,17 @@
 ## 第一阶段：原生 JS
 
 - 学习
-  - [ ] 基础 JS 语法
-    - [ ] 学习插入 JS 的方法（一样分为内联与外联）
+  - [x] 基础 JS 语法
+    - [x] 学习插入 JS 的方法（一样分为内联与外联）
     - var、let、const 区别（尤其是作用域）
     - function 与作用域
-  - [ ] dom 相关 API 了解
-  - [ ] 了解什么是 ECMAScript，什么是 ES6
-  - [ ] 【ES6】学习模版字符串
-  - [ ] 【ES6】学习解构赋值
-  - [ ] 学习数组常用方法(for 循环、for in、for of)，函数式或是叫流式方法（map、filter、forEach、reduce）
+  - [x] dom 相关 API 了解
+  - [x] 了解什么是 ECMAScript，什么是 ES6
+  - [x] 【ES6】学习模版字符串
+  - [x] 【ES6】学习解构赋值
+  - [x] 学习数组常用方法(for 循环、for in、for of)，函数式或是叫流式方法（map、filter、forEach、reduce）
 - 修改
-  - [ ] 使用 JS 创建与操作 dom 元素
+  - [x] 使用 JS 创建与操作 dom 元素
   - [ ] 使用 for 循环生成列表项
   - [ ] 使用 JS 动态调整样式
   - [ ] 使用计时器实现打字机效果展现 title
