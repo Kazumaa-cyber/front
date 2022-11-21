@@ -188,3 +188,7 @@ body {
   align-items: center;
   max-width: 1440px;
 }
+
+#title.red {
+  color: red;
+}

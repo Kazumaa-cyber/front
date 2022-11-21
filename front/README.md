@@ -65,18 +65,31 @@
   - [x] 【ES6】学习模版字符串
   - [x] 【ES6】学习解构赋值
   - [x] 学习数组常用方法(for 循环、for in、for of)，函数式或是叫流式方法（map、filter、forEach、reduce）
+  - [ ] 格式化工具的使用
+    - 了解一下 prettier、editorconfig
+  - [ ] addEventListener、removeEventListener
+  - [ ] 了解常见事件 MouseEvent, KeyboardEvent, blablabla
+  - [ ] Element.classList 对象用法
 - 修改
   - [x] 使用 JS 创建与操作 dom 元素
-  - [ ] 使用 for 循环生成列表项
-  - [ ] 使用 JS 动态调整样式
-  - [ ] 使用计时器实现打字机效果展现 title
+  - [x] 使用 for 循环生成列表项
+  - [ ] 使用 JS 动态调整样式、计时器实战
+    - [x] 使用计时器实现打字机效果展现 title
+    - [ ] Overview 段落实现手风琴效果
   - [ ] 初步理解 Component 概念
+    - [ ] 动手使用 template 作为模版、JS 修改内容后快速生成 html
+  - [ ] 
 
 ## 第二阶段：React
 
 - 学习
   - [ ] 了解 JS 基础语法
-  - [ ] 了解 ES6，重点了解 let、const、Array、Arrow Function
+  - [ ] 了解 ES6，重点了解
+    - [ ] let、const
+    - [ ] Array（map、filter、forEach、reduce）
+    - [ ] Arrow Function
+    - [ ] Class（了解 ES5 的 function Class 与 ES6 的 class 写法差异）
+    - [ ] 了解原型链是啥
   - [ ] 了解 React 基础语法：JSX、项目构建
 - 修改
   - [ ] 使用 React 重写一次

@@ -140,6 +140,11 @@ function createLi(content){
               <span class="code_style">${content.span_context}</span>
             )</li>`
   }
+
+  // const templateEl = query(...)
+  // templateEl.content = '...'
+  // const ul = query(...)
+  // ul.append(templateEl.import)
 }
 
 function setInnerHTML(element,arr){
@@ -149,3 +154,31 @@ function setInnerHTML(element,arr){
 
 setInnerHTML(osList,osContentList)
 setInnerHTML(featureList,featureContentList)
+
+/**
+ * 打字机效果
+ */
+const title = document.querySelector('#title')
+title.addEventListener('click', (e) => {
+  console.log(`this is a click event`, e)
+  e.target.classList.toggle('red')
+})
+
+const subtitle = document.querySelector('.center_content .subtitle')
+// console.log('subtitle', subtitle)
+subtitle.addEventListener('click', () => {
+  subtitle.textContent = ''
+  
+  const content = 'Rust-based platform for the Web';
+  let len = 1;
+
+  const next = () => {
+    if (len < content.length) {
+      len++;
+      subtitle.textContent = content.substring(0, len);
+      setTimeout(next, 300)
+    }
+  }
+
+  setTimeout(next, 300)
+})
