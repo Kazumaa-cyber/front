@@ -124,13 +124,13 @@ body {
 }
 
 #nav li + li::before {
-  content: "·";
+  content: '·';
 }
 
 .second-title {
   max-height: 0px;
   overflow: hidden;
-  transition: max-height 3s linear 0s;
+  transition: max-height 2s ease-in-out 0s;
 }
 
 .second-title.active {
@@ -150,11 +150,16 @@ body {
   background-color: #0000000d;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
-  padding: 2px 3.6px 2px 3.6px;
+  /* padding: 1px;
+  padding: 1px 1px;
+  padding: 1px 1px 1px; */
+  padding: 2px 3.6px;
   font-size: 14.4px;
 }
 
 #os_list ul {
+  /* margin-top: 24px; */
+  /* margin-left: 24px; */
   margin: 24px 0px 0px 24px;
 }
 

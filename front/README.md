@@ -40,12 +40,12 @@
 # 学习
 
 - [x] flex 布局
-- [ ] css 选择器
+- [x] css 选择器
   - [https://blog.csdn.net/weixin_44691608/article/details/106603985](https://blog.csdn.net/weixin_44691608/article/details/106603985)
-  - [ ] 掌握基础的伪选择器 `:hover, :active`
-- [ ] css 权重（可选）
+  - [x] 掌握基础的伪选择器 `:hover, :active`
+- [x] css 权重（可选）
   - [https://blog.csdn.net/weixin_44691608/article/details/106649186](https://blog.csdn.net/weixin_44691608/article/details/106649186) 
-- [ ] position 定位
+- [x] position 定位
   - relative、absolute、fixed 差异
   - 之前用的 sticky 对比
 
@@ -68,17 +68,19 @@
   - [x] 格式化工具的使用
     - 了解一下 prettier、editorconfig
   - [x] addEventListener、removeEventListener
+  - [x] Element.classList 对象用法
   - [ ] 了解常见事件 MouseEvent, KeyboardEvent, blablabla
-  - [ ] Element.classList 对象用法
+    - clientX, clientY
+    - path
+  - [ ] Event Flow 事件流(冒泡、捕获)
 - 修改
   - [x] 使用 JS 创建与操作 dom 元素
   - [x] 使用 for 循环生成列表项
-  - [ ] 使用 JS 动态调整样式、计时器实战
+  - [x] 使用 JS 动态调整样式、计时器实战
     - [x] 使用计时器实现打字机效果展现 title
     - [x] Overview 段落实现手风琴效果
-  - [ ] 初步理解 Component 概念
-    - [ ] 动手使用 template 作为模版、JS 修改内容后快速生成 html
-  - [ ] 
+  - [x] 初步理解 Component 概念
+    - [x] 动手使用 template 作为模版、JS 修改内容后快速生成 html
 
 ## 第二阶段：React
 
