@@ -197,6 +197,15 @@ function setInnerHTML(container, itemList) {
 setInnerHTML(osListEl, osContentList);
 setInnerHTML(featureList, featureContentList);
 
+class OsComponent {
+  data = osContentList;
+  container = osListEl;
+
+  render() {
+    setInnerHTML(this.container, this.data);
+  }
+}
+
 /**
  * 打字机效果
  */
@@ -267,3 +276,5 @@ btns.forEach((item, index) => {
 // const handleSucces = (result) => {};
 
 // func(handleSucces, (error) => {});
+
+function onClickBtn() {}

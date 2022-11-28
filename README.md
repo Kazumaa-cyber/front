@@ -93,6 +93,8 @@
     - [ ] Class（了解 ES5 的 function Class 与 ES6 的 class 写法差异）
     - [ ] 了解原型链是啥
   - [ ] 了解 React 基础语法：JSX、项目构建
+  - [ ] 阅读完 React 基础教程
+    - [ ] [https://blog.csdn.net/weixin_44691608/article/details/117343164](https://blog.csdn.net/weixin_44691608/article/details/117343164)
 - 修改
   - [ ] 使用 React 重写一次
   - [ ] 进行 Component 的详细划分
