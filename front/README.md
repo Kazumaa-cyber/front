@@ -65,9 +65,9 @@
   - [x] 【ES6】学习模版字符串
   - [x] 【ES6】学习解构赋值
   - [x] 学习数组常用方法(for 循环、for in、for of)，函数式或是叫流式方法（map、filter、forEach、reduce）
-  - [ ] 格式化工具的使用
+  - [x] 格式化工具的使用
     - 了解一下 prettier、editorconfig
-  - [ ] addEventListener、removeEventListener
+  - [x] addEventListener、removeEventListener
   - [ ] 了解常见事件 MouseEvent, KeyboardEvent, blablabla
   - [ ] Element.classList 对象用法
 - 修改
@@ -75,7 +75,7 @@
   - [x] 使用 for 循环生成列表项
   - [ ] 使用 JS 动态调整样式、计时器实战
     - [x] 使用计时器实现打字机效果展现 title
-    - [ ] Overview 段落实现手风琴效果
+    - [x] Overview 段落实现手风琴效果
   - [ ] 初步理解 Component 概念
     - [ ] 动手使用 template 作为模版、JS 修改内容后快速生成 html
   - [ ] 
