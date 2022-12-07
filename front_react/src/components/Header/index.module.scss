@@ -1,0 +1,22 @@
+.header {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  .wrapperLeft {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .wrapperRight {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+  }
+}

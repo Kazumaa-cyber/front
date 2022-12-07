@@ -99,6 +99,13 @@
   - [ ] 使用 React 重写一次
   - [ ] 进行 Component 的详细划分
 
+### JS 问题
+
+- [x] 作用域、var let const
+- [x] call、bind、apply
+- [x] function 箭头函数
+- [ ] arguments
+
 ## 第三阶段：React Router
 
 加入路由
