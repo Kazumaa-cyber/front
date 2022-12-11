@@ -8,21 +8,21 @@ class Header extends React.Component {
       <div className={styles.header}>
         <div className={styles.wrapper}>
           <div className={styles.wrapperLeft}>
-            {/* <img src="https://swc.rs/logo.png" style="width: 50px" /> */}
-            <span>SWC</span>
-            <span>Speedy Web Compiler</span>
+            {/* <img src={require('https://swc.rs/logo.png')} style={{width: '50px'}} /> */}
+            <span className={styles.spanSWC}>SWC</span>
+            <span className={styles.spanSWCMore}>Speedy Web Compiler</span>
           </div>
           <div className={styles.wrapperRight}>
-            <div style={{ color: '#6b7280' }}>Docs</div>
-            <div style={{ color: '#6b7280' }}>PlayGround</div>
-            <div style={{ color: '#6b7280' }}>Blog</div>
-            <div id="search-kuang">
+            <div className={styles.rightText}>Docs</div>
+            <div className={styles.rightText}>PlayGround</div>
+            <div className={styles.rightText}>Blog</div>
+            <div className={styles.searchKuang}>
               <input
-                id="input-kuang"
+                className={styles.inputKuang}
                 type="search"
                 placeholder="Search documentation..."
               />
-              <div id="kuang">
+              <div className={styles.xieGang}>
                 <div>/</div>
               </div>
             </div>

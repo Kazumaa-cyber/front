@@ -1,4 +1,8 @@
 .header {
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 255, 255, 0.99);
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -18,5 +22,66 @@
     align-items: center;
     gap: 16px;
     overflow: hidden;
+
+    .rightText{
+      color: #6b7280;
+    }
   }
 }
+
+.spanSWC {
+  font-weight: 800;
+  margin: 0px 8px 0px 8px;
+  min-width: 0px;
+}
+
+.spanSWCMore {
+  color: #4b5563;
+  margin-right: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  min-width: 0px;
+}
+
+.searchKuang {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .inputKuang {
+    background-color: rgb(0 0 0/0.03);
+    font-size: 100%;
+    width: 100%;
+    padding: 8px 12px 8px 12px;
+    border: 0 solid #e5e7eb;
+    border-radius: 0.5rem;
+    width: 220px;
+    color: #6b7280;
+
+    :focus {
+      background-color: #fff;
+    }
+  }
+
+  .xieGang {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    div {
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #e5e7eb;
+      padding-left: 7px;
+      padding-right: 7px;
+      color: #6b7280;
+    }
+  }
+}
+
+
