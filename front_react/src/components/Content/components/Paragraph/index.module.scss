@@ -1,0 +1,30 @@
+.container {
+  margin-top: 40px;
+
+  a {
+    text-decoration: none;
+    color: var(--header-color);
+    font-size: 30px;
+  }
+
+  .hash {
+    margin: 0 4px;
+    padding: 0 4px;
+    color: rgb(209, 213, 219);
+    font-size: 30px;
+    opacity: 0;
+    text-decoration: none;
+  }
+
+  h2:hover > .hash {
+    opacity: 1;
+    text-decoration: none;
+  }
+
+  .titleUndreline {
+    height: 1px;
+    margin-top: 2px;
+    margin-bottom: 24px;
+    background-color: #e5e7eb;
+  }
+}

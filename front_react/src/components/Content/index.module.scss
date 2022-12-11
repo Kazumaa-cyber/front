@@ -1,0 +1,10 @@
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 800px;
+    padding: 16px 32px 0;
+  }
+}

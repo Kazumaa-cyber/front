@@ -13,9 +13,13 @@ class Header extends React.Component {
             <span className={styles.spanSWCMore}>Speedy Web Compiler</span>
           </div>
           <div className={styles.wrapperRight}>
-            <div className={styles.rightText}>Docs</div>
-            <div className={styles.rightText}>PlayGround</div>
-            <div className={styles.rightText}>Blog</div>
+            {/* <Tabs /> */}
+            {/* div div div */}
+            {['Docs', 'PlayGround', 'Blog', 'Blog', 'Blog', 'Blog'].map(
+              (title) => (
+                <div className={styles.rightText}>{title}</div>
+              ),
+            )}
             <div className={styles.searchKuang}>
               <input
                 className={styles.inputKuang}

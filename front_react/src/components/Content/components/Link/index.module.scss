@@ -1,0 +1,10 @@
+.link {
+  display: inline;
+  color: rgb(0, 119, 255);
+
+  & + &::before {
+    content: '·';
+    margin: 0 2px;
+    color: rgb(0, 119, 255);
+  }
+}

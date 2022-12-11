@@ -4,6 +4,8 @@
 }
 
 body {
+  --header-color: #000;
+
   width: 100%;
   margin: 0;
   box-sizing: border-box;
@@ -11,4 +13,8 @@ body {
     radial-gradient(#ddd 1px, transparent 0);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
+
+  html[class~='dark'] & {
+    --header-color: #fff;
+  }
 }

@@ -96,8 +96,13 @@
   - [ ] 阅读完 React 基础教程
     - [ ] [https://blog.csdn.net/weixin_44691608/article/details/117343164](https://blog.csdn.net/weixin_44691608/article/details/117343164)
 - 修改
-  - [ ] 使用 React 重写一次
+  - [x] 使用 React 重写一次
   - [ ] 进行 Component 的详细划分
+    - [ ] Header
+    - [ ] Content
+      - [ ] 橘色高亮框
+      - [ ] 蓝色代码框
+    - [ ] Footer
 
 ### JS 问题
 
