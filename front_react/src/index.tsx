@@ -6,9 +6,9 @@ import './index.module.scss';
 
 const root = createRoot(document.querySelector('#app') as HTMLElement);
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>,
 );
 
 // <App />

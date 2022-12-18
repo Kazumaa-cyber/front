@@ -10,11 +10,14 @@ import StatLabel from './components/StatLabel';
 import HrefText from './components/HrefText';
 
 import styles from './index.module.scss';
+import Overview from './components/Overview';
 
 class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      firstName: 'AAA',
+      lastName: 'BBB',
       headerSubtitle: 'Rust-based platform for the Web',
       links: [
         {
@@ -113,6 +116,11 @@ class Content extends React.Component {
     };
   }
 
+  getName() {
+    // vue: computed
+    return `${this.state.firstName}+${this.state.lastName}`;
+  }
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({
@@ -125,6 +133,7 @@ class Content extends React.Component {
   render() {
     return (
       <div className={styles.container}>
+        <div>{this.getName()}</div>
         <div className={styles.wrapper}>
           <HeadTitle
             title={'SWC'}
@@ -140,7 +149,9 @@ class Content extends React.Component {
             }
           />
           <LinkList links={this.state.links} />
-          <Paragraph
+          <div>os count: {this.state.osList.length}</div>
+          <Overview />
+          {/* <Paragraph
             title="Overview"
             // subtitle={
             //   <div>
@@ -157,7 +168,7 @@ class Content extends React.Component {
                 <DataList data={this.state.osList} />
               </div>
             }
-          />
+          /> */}
           <Paragraph
             title="Features"
             content={

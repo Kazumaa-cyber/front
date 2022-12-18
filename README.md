@@ -82,19 +82,19 @@
   - [x] 初步理解 Component 概念
     - [x] 动手使用 template 作为模版、JS 修改内容后快速生成 html
 
-## 第二阶段：React
+## 第二阶段：React 改造
 
 - 学习
-  - [ ] 了解 JS 基础语法
-  - [ ] 了解 ES6，重点了解
-    - [ ] let、const
-    - [ ] Array（map、filter、forEach、reduce）
-    - [ ] Arrow Function
-    - [ ] Class（了解 ES5 的 function Class 与 ES6 的 class 写法差异）
-    - [ ] 了解原型链是啥
-  - [ ] 了解 React 基础语法：JSX、项目构建
-  - [ ] 阅读完 React 基础教程
-    - [ ] [https://blog.csdn.net/weixin_44691608/article/details/117343164](https://blog.csdn.net/weixin_44691608/article/details/117343164)
+  - [x] 了解 JS 基础语法
+  - [x] 了解 ES6，重点了解
+    - [x] let、const
+    - [x] Array（map、filter、forEach、reduce）
+    - [x] Arrow Function
+    - [x] Class（了解 ES5 的 function Class 与 ES6 的 class 写法差异）
+    - [x] 了解原型链是啥
+  - [x] 了解 React 基础语法：JSX、项目构建
+  - [x] 阅读完 React 基础教程
+    - [x] [https://blog.csdn.net/weixin_44691608/article/details/117343164](https://blog.csdn.net/weixin_44691608/article/details/117343164)
 - 修改
   - [x] 使用 React 重写一次
   - [x] 进行 Component 的详细划分
@@ -112,9 +112,42 @@
 - [x] function 箭头函数
 - [ ] arguments
 
+## 第三阶段：React 核心
 
-## 第三阶段：React Router
+基础 = Class Component = Function Component + Hook
+
+- [ ] Class 组件写法
+  - [ ] props
+  - [ ] state
+  - [ ] LifeCycle: DidMount, DidUpdate
+  - [ ] Event: onClick
+    - [ ] function, bind, this.xxx
+  - [ ] Form: onSubmit, onChange, onInput
+  - [x] 受控组件 vs 非受控组件
+  - [ ] Context API
+    - [ ] renderProps
+  - [ ] ref
+    - [ ] ref 一般元素 => 真实 dom 元素
+    - [ ] ref 组件？ =>
+    - [ ] ref 透传
+    - [ ] callback ref
+- [ ] Function 组件写法(use)
+  - [ ] props
+  - [ ] state => useState
+  - [ ] LifeCycle => useEffect
+  - [ ] function? => useCallback
+  - [ ] computed => useMemo
+  - [ ] ContextAPI => useContext
+  - [ ] ref => useRef
+- 进阶使用方法
+  - HOC
+  - Render Props
+
+
+## 第四阶段：React Router
 
 加入路由
+
+## 第五阶段：React 状态管理
 
 
