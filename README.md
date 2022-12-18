@@ -97,13 +97,13 @@
     - [ ] [https://blog.csdn.net/weixin_44691608/article/details/117343164](https://blog.csdn.net/weixin_44691608/article/details/117343164)
 - 修改
   - [x] 使用 React 重写一次
-  - [ ] 进行 Component 的详细划分
-    - [ ] Header
-    - [ ] Content
-      - [ ] 橘色高亮框
-      - [ ] 蓝色代码框
-    - [ ] Footer
-    - [ ] const函数
+  - [x] 进行 Component 的详细划分
+    - [x] Header
+    - [x] Content
+      - [x] 橘色高亮框
+      - [x] 蓝色代码框
+    - [x] Footer
+    - [x] const函数
 
 ### JS 问题
 

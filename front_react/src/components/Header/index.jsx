@@ -15,11 +15,11 @@ class Header extends React.Component {
           <div className={styles.wrapperRight}>
             {/* <Tabs /> */}
             {/* div div div */}
-            {['Docs', 'PlayGround', 'Blog', 'Blog', 'Blog', 'Blog'].map(
-              (title) => (
-                <div className={styles.rightText}>{title}</div>
-              ),
-            )}
+            {['Docs', 'PlayGround', 'Blog'].map((title) => (
+              <div className={styles.rightText} key={title}>
+                {title}
+              </div>
+            ))}
             <div className={styles.searchKuang}>
               <input
                 className={styles.inputKuang}

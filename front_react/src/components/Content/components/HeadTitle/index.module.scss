@@ -3,6 +3,14 @@
   margin: 32px 0px 0px 0px;
   font-size: 3rem;
   font-weight: 800;
+
+  &:global(.red) {
+    color: red;
+  }
+
+  &:global(.green) {
+    color: green;
+  }
 }
 
 .subtitle {
@@ -12,7 +20,8 @@
   margin-bottom: 8px;
   margin-top: 20px;
 }
-.abstract{
+
+.abstract {
   margin-top: 24px;
   line-height: 30px;
 }

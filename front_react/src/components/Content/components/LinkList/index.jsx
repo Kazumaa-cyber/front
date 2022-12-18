@@ -8,7 +8,7 @@ const LinkList = ({ links }) => {
   return (
     <ul className={styles.linkList}>
       {links.map(({ href, text }) => (
-        <Link href={href} text={text} />
+        <Link key={text} href={href} text={text} />
       ))}
     </ul>
   );

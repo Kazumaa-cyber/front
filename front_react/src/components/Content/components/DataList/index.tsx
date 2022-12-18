@@ -14,8 +14,8 @@ interface IDataListProps {
 const DataList: FC<IDataListProps> = ({ data }) => {
   return (
     <ul className={styles.dataUl}>
-      {data.map((item) => (
-        <li className={styles.item}>
+      {data.map((item, index) => (
+        <li className={styles.item} key={index}>
           <span className="title">{item.title}</span>
           {item.description ? (
             <span className="description">

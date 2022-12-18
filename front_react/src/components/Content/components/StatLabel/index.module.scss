@@ -1,20 +1,23 @@
-.conatiner{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    border-radius: 4px;
-    color: white;
+.conatiner {
+  --subtitle-background: transparent;
 
-    .title{
-        background-color: gray;
-        border-radius: 4px 0px 0px 4px;
-        font-size: 10px;
-        padding: 2px 2px 2px 2px;
-    }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 4px;
+  color: white;
 
-    .subTitle{
-        border-radius: 0px 4px 4px 0px;
-        padding: 2px 2px 2px 2px;
-        font-size: 10px;
-    }
+  .title {
+    background-color: gray;
+    border-radius: 4px 0px 0px 4px;
+    font-size: 10px;
+    padding: 2px 2px 2px 2px;
+  }
+
+  .subTitle {
+    border-radius: 0px 4px 4px 0px;
+    padding: 2px 2px 2px 2px;
+    font-size: 10px;
+    background: var(--subtitle-background);
+  }
 }

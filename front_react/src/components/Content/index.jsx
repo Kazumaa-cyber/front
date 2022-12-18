@@ -1,103 +1,104 @@
-import React from "react";
-import DataList from "./components/DataList";
-import InlineCode from "./components/InlineCode";
+import React from 'react';
+import DataList from './components/DataList';
+import InlineCode from './components/InlineCode';
 
-import LinkList from "./components/LinkList";
-import Paragraph from "./components/Paragraph";
-import RedCode from "./components/RedCode";
-import HeadTitle from "./components/HeadTitle";
-import StatLabel from "./components/StatLabel";
-import HrefText from "./components/HrefText";
+import LinkList from './components/LinkList';
+import Paragraph from './components/Paragraph';
+import RedCode from './components/RedCode';
+import HeadTitle from './components/HeadTitle';
+import StatLabel from './components/StatLabel';
+import HrefText from './components/HrefText';
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss';
 
 class Content extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      headerSubtitle: 'Rust-based platform for the Web',
       links: [
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "Get Started",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'Get Started',
         },
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "Playground",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'Playground',
         },
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "Blog",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'Blog',
         },
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "Rustdocs",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'Rustdocs',
         },
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "GitHub Repository",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'GitHub Repository',
         },
         {
-          href: "https://swc.rs/docs/getting-started",
-          text: "Donate",
+          href: 'https://swc.rs/docs/getting-started',
+          text: 'Donate',
         },
       ],
       osList: [
         {
-          title: "Mac",
-          description: "Apple Silicon",
+          title: 'Mac',
+          description: 'Apple Silicon',
         },
         {
-          title: "Mac",
-          description: "x64",
+          title: 'Mac',
+          description: 'x64',
         },
         {
-          title: "Linux",
-          description: "x86_64",
+          title: 'Linux',
+          description: 'x86_64',
         },
         {
-          title: "Linux",
-          description: "aarch64",
+          title: 'Linux',
+          description: 'aarch64',
         },
         {
-          title: "Linux",
-          description: "armv7",
+          title: 'Linux',
+          description: 'armv7',
         },
         {
-          title: "Alpine Linux",
+          title: 'Alpine Linux',
           description: (
             <>
-              <span>also install</span>{" "}
+              <span>also install</span>{' '}
               <InlineCode text="@swc/core-linux-musl" />
             </>
           ),
         },
         {
-          title: "Android",
-          description: "aarch64",
+          title: 'Android',
+          description: 'aarch64',
         },
         {
-          title: "Windows",
-          description: "win32-x64",
+          title: 'Windows',
+          description: 'win32-x64',
         },
         {
-          title: "Windows",
-          description: "ia32",
+          title: 'Windows',
+          description: 'ia32',
         },
       ],
       featureList: [
-        { title: "Compilation" },
-        { title: "Bundling", description: <InlineCode text="swcpack" /> },
-        { title: "Minification" },
-        { title: "Transforming with WebAssembly" },
+        { title: 'Compilation' },
+        { title: 'Bundling', description: <InlineCode text="swcpack" /> },
+        { title: 'Minification' },
+        { title: 'Transforming with WebAssembly' },
         {
-          title: "Usage inside webpack",
+          title: 'Usage inside webpack',
           description: <InlineCode text="swc-loader" />,
         },
         {
-          title: "Improving Jest performance",
+          title: 'Improving Jest performance',
           description: <InlineCode text="@swc/jest" />,
         },
-        { title: "Custom Plugins" },
+        { title: 'Custom Plugins' },
       ],
       abstractList: [
         {
@@ -106,10 +107,19 @@ class Content extends React.Component {
         },
         {
           paragraph:
-            " SWC can be used for both compilation and bundling. For compilation, it takes JavaScript / TypeScript files using modern JavaScript features and outputs valid code that is supported by all major browsers.",
+            ' SWC can be used for both compilation and bundling. For compilation, it takes JavaScript / TypeScript files using modern JavaScript features and outputs valid code that is supported by all major browsers.',
         },
       ],
     };
+  }
+
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({
+        headerSubtitle:
+          'This is another subtitle, This is another subtitle, This is another subtitle, This is another subtitle',
+      });
+    }, 1000);
   }
 
   render() {
@@ -117,13 +127,13 @@ class Content extends React.Component {
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <HeadTitle
-            title={"SWC"}
-            subtitle={"Rust-based platform for the Web"}
+            title={'SWC'}
+            subtitle={this.state.headerSubtitle}
             abstract={this.state.abstractList}
           />
           <RedCode
             content={
-              <p style={{ margin: "8px 4px 8px 8px" }}>
+              <p style={{ margin: '8px 4px 8px 8px' }}>
                 SWC is <strong>20x faster than Babel </strong>on a single thread
                 and<strong> 70x faster </strong>on four cores.
               </p>
@@ -159,8 +169,8 @@ class Content extends React.Component {
                 <DataList data={this.state.featureList} />
                 <p>
                   <HrefText
-                    href={"https://twitter.com/kdy1dev"}
-                    text={"Learn more"}
+                    href={'https://twitter.com/kdy1dev'}
+                    text={'Learn more'}
                   />
                   .
                 </p>
@@ -170,7 +180,7 @@ class Content extends React.Component {
           <Paragraph
             title="Community"
             subtitle={
-              <div style={{ display: "flex", marginTop: "-24px", gap: "10px" }}>
+              <div style={{ display: 'flex', marginTop: '-24px', gap: '10px' }}>
                 <StatLabel
                   title="stars"
                   subtitle="25.1K"
@@ -186,23 +196,23 @@ class Content extends React.Component {
             content={
               <div>
                 <p style={{ lineHeight: 3 }}>
-                  SWC is created by{" "}
+                  SWC is created by{' '}
                   <HrefText
-                    href={"https://twitter.com/kdy1dev"}
-                    text={"@kdy1dev"}
+                    href={'https://twitter.com/kdy1dev'}
+                    text={'@kdy1dev'}
                   />
-                  . Follow{" "}
+                  . Follow{' '}
                   <HrefText
-                    href={"https://twitter.com/kdy1dev"}
-                    text={"@kdy1dev"}
-                  />
-                  {" "}on Twitter for future project updates.
+                    href={'https://twitter.com/kdy1dev'}
+                    text={'@kdy1dev'}
+                  />{' '}
+                  on Twitter for future project updates.
                 </p>
                 <p>
-                  Feel free to join the{" "}
+                  Feel free to join the{' '}
                   <HrefText
-                    href={"https://github.com/swc-project/swc/discussions"}
-                    text={"discussions on GitHub"}
+                    href={'https://github.com/swc-project/swc/discussions'}
+                    text={'discussions on GitHub'}
                   />
                   !
                 </p>
@@ -212,9 +222,9 @@ class Content extends React.Component {
           <div className={styles.updateDate}>
             <p
               style={{
-                textAlign: "right",
-                fontSize: "0.75em",
-                color: "#6b7280",
+                textAlign: 'right',
+                fontSize: '0.75em',
+                color: '#6b7280',
               }}
             >
               Last updated on 2022年8月29日

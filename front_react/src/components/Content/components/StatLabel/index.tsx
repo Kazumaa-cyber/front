@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styles from './index.module.scss'
+import styles from './index.module.scss';
 
 interface IStatLabelProps {
   title: string;
@@ -7,14 +7,25 @@ interface IStatLabelProps {
   subtitleBgColor: string;
 }
 
-const StatLabel: FC<IStatLabelProps> = ({title,subtitle,subtitleBgColor}) => {
-  const bgColor = {
-    background:`${subtitleBgColor}`
-  }
-  return <div className={styles.conatiner}>
+const StatLabel: FC<IStatLabelProps> = ({
+  title,
+  subtitle,
+  subtitleBgColor,
+}) => {
+  return (
+    <div className={styles.conatiner}>
       <div className={styles.title}>{title}</div>
-      <div className={styles.subTitle} style={bgColor}>{subtitle}</div>
-  </div>;
+      <div
+        className={styles.subTitle}
+        style={{
+          // @ts-ignore
+          '--subtitle-background': subtitleBgColor,
+        }}
+      >
+        {subtitle}
+      </div>
+    </div>
+  );
 };
 
 export default StatLabel;
