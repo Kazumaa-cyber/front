@@ -13,7 +13,7 @@ interface IDataListProps {
 
 const DataList: FC<IDataListProps> = ({ data }) => {
   return (
-    <ul>
+    <ul className={styles.dataUl}>
       {data.map((item) => (
         <li className={styles.item}>
           <span className="title">{item.title}</span>

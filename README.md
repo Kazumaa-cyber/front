@@ -103,6 +103,7 @@
       - [ ] 橘色高亮框
       - [ ] 蓝色代码框
     - [ ] Footer
+    - [ ] const函数
 
 ### JS 问题
 
@@ -110,6 +111,7 @@
 - [x] call、bind、apply
 - [x] function 箭头函数
 - [ ] arguments
+
 
 ## 第三阶段：React Router
 
