@@ -135,10 +135,11 @@
   - [ ] props
   - [x] state => useState
   - [x] LifeCycle => useEffect
-  - [ ] function? => useCallback
-  - [ ] computed => useMemo
+  - [x] function? => useCallback
+  - [x] computed => useMemo
+  - [x] ref => useRef(HTMLElement, variable)
   - [x] ContextAPI => useContext
-  - [x] ref => useRef
+  - [x] Custom Hook
 - 进阶使用方法
   - HOC
   - Render Props
@@ -150,4 +151,48 @@
 
 ## 第五阶段：React 状态管理
 
+# 1月后计划
 
+1. 熟悉 FC 写法
+2. 状态管理：Redux/Flux（recoil、jotai；zustand、mobx、rxjs(lodash? rxjs = lodash for async)）
+3. (options)路由
+
+4. Project -> 面试？练手？Real App？
+5. 工程化
+   - Web = 前后端分离
+   - 前端（静态文件资源）
+     - App 内容
+       - data -> view（Component）
+       - UI
+         - React
+         - Vue（屏蔽 dom 操作）
+       - 状态管理
+       - 多页面 -> 路由
+     - 工程化
+       - web = html + css + js（静态）
+       - 构建（看）
+         - create-react-app
+         - NPM = Node.js Project Management
+           - npm
+           - yarn
+           - pnpm
+           - tnpm
+         - 打包工具 webpack/rollup/vite
+           - 流程：识别模块 -> 生成模块依赖表 -> chunk -> 生成终产物
+         - 编译工具
+           - babel
+       - 部署
+         - http 服务器（静态资源服务器）
+   - 后端（logic -> 进程 progress）
+     - service（logic）+ DB（持久化）
+     - 服务器 = 处理网络请求（http）
+       - HTTP = HEADER + body
+         - content-type
+         - html
+         - js
+         - jpeg
+         - JSON
+
+- Vue3？
+1. 同步 / 异步（面试）
+- ？
