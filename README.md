@@ -124,21 +124,21 @@
     - [ ] function, bind, this.xxx
   - [ ] Form: onSubmit, onChange, onInput
   - [x] 受控组件 vs 非受控组件
-  - [ ] Context API
-    - [ ] renderProps
-  - [ ] ref
-    - [ ] ref 一般元素 => 真实 dom 元素
-    - [ ] ref 组件？ =>
-    - [ ] ref 透传
-    - [ ] callback ref
+  - [x] Context API
+    - [x] renderProps
+  - [x] ref
+    - [x] ref 一般元素 => 真实 dom 元素
+    - [x] ref 组件？ =>
+    - [x] ref 透传
+    - [x] callback ref
 - [ ] Function 组件写法(use)
   - [ ] props
-  - [ ] state => useState
-  - [ ] LifeCycle => useEffect
+  - [x] state => useState
+  - [x] LifeCycle => useEffect
   - [ ] function? => useCallback
   - [ ] computed => useMemo
-  - [ ] ContextAPI => useContext
-  - [ ] ref => useRef
+  - [x] ContextAPI => useContext
+  - [x] ref => useRef
 - 进阶使用方法
   - HOC
   - Render Props

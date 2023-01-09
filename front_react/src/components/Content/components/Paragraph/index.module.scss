@@ -28,3 +28,14 @@
     background-color: #e5e7eb;
   }
 }
+
+.secondTitle {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 2s ease-in-out 0s;
+  .active {
+    max-height: 1000px;
+  }
+}
+
+
