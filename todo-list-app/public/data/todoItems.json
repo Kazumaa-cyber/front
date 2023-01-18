@@ -1,7 +1,7 @@
 [
   {
-    "isComplete": false,
+    "count": 1,
     "title": "lalala",
-    "tags": []
+    "tags": [{ "name": "hello", "color": "yellow" }]
   }
 ]

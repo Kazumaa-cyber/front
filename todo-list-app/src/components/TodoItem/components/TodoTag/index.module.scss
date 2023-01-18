@@ -1,0 +1,30 @@
+.RowContainer{
+    display: flex;
+    align-items: center;
+    height: 36px;
+    border-radius: 10px;
+    background-color: beige;
+    min-width: 240px;
+
+    .checkStyle{
+        margin-left: 10px;
+    }
+
+    .titleStyle{
+        margin-left: 10px;
+        
+    }
+
+    
+}
+
+.typeStyle{
+    --bg-color:blue;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    min-width: 20%;
+    height: 50%;
+    color: white;
+    margin-right: 50px;
+    margin-left: auto;
+}
