@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React from 'react';
 import TodoList from './components/TodoList';
 import styles from './App.module.scss';
 
@@ -44,20 +44,9 @@ import styles from './App.module.scss';
  */
 
 const App = () => {
-  const [todoItems, setTodoItems] = useState([]);
-  // const groups: TodoGroup[];
-
-  useEffect(() => {
-    fetch('http://localhost:3000/data/todoItems.json')
-      .then((res) => res.json())
-      .then((res) => {});
-  }, []);
-
   return (
     <div className={styles.container}>
-      <h1>React App</h1>
-      <div>Project build by @youxian/cli</div>
-      <TodoList></TodoList>
+      <TodoList />
     </div>
   );
 };

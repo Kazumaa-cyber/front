@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import TodoTag from '../../../TodoTag';
 import styles from './index.module.scss';
 
 // interface TodoTag {
@@ -7,17 +8,12 @@ import styles from './index.module.scss';
 //   color?: string;
 // }
 
-const TodoItem = ({ initName, initColor }) => {
-  const [name, setName] = useState(initName);
-  const [color, setColor] = useState(initColor);
-  const [isComplete, setComplete] = useState(false);
-
-  useEffect(() => {
-    console.log('hello');
-  }, []);
-
+const TodoItem = ({ todoItem, onIsCompleteChange }) => {
+  // const todoItem = todoList[i]
   function handleChange() {
-    setComplete(!isComplete);
+    const newIsComplete = !todoItem.isComplete;
+    onIsCompleteChange(newIsComplete);
+    // todoList[i].isComplete = newIsComplete;
   }
 
   return (
@@ -25,15 +21,15 @@ const TodoItem = ({ initName, initColor }) => {
       <label>
         <input
           type="checkbox"
-          name="isComplete"
+          checked={todoItem.isComplete}
           className={styles.checkStyle}
-          onClick={handleChange}
-        ></input>{' '}
+          onChange={handleChange}
+        />
       </label>
-      <div className={styles.titleStyle}>hello</div>
-      <div className={styles.typeStyle} style={{ '--bg-color': color }}>
-        here
-      </div>
+      <div className={styles.titleStyle}>{todoItem.title}</div>
+      {todoItem.tags.map((tag, i) => (
+        <TodoTag key={`${tag}-${i}`} tag={tag} />
+      ))}
     </div>
   );
 };

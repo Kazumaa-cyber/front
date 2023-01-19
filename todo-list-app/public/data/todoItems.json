@@ -1,7 +1,12 @@
 [
   {
-    "count": 1,
+    "isComplete": false,
     "title": "lalala",
-    "tags": [{ "name": "hello", "color": "yellow" }]
+    "tags": [{ "name": "hello", "color": "green" }]
+  },
+  {
+    "isComplete": true,
+    "title": "Completed todo",
+    "tags": [{ "name": "hello", "color": "pink" }]
   }
 ]

@@ -2,21 +2,22 @@ import React, { FC, useEffect, useState } from 'react';
 import TodoItem from './components/TodoItem';
 import AddItem from './components/AddItem';
 import styles from './index.module';
+import { useTodoList } from './hooks/useTodoList';
 
 const TodoList = () => {
   const [title, setTitle] = useState('first');
-  const [tags, setTags] = useState([
-    { name: 'hello', color: 'yellow' },
-    { name: 'hi', color: 'blue' },
-  ]);
-  const [isAdd, setAdd] = useState(false);
+  const [todoList, setTodoList] = useTodoList();
+  console.log('todoList', todoList);
+
+  const [addItemVisible, setAddItemVisible] = useState(false);
 
   function openAdd() {
-    setAdd(!isAdd);
+    setAddItemVisible(true);
   }
 
-  function AddTag(event) {
-    //setTags([...tags+event.target.value]);
+  function addItem(item) {
+    console.log('item', item);
+    setTodoList([...todoList, item]);
   }
 
   return (
@@ -26,17 +27,34 @@ const TodoList = () => {
       </div>
 
       <div className={styles.tagContainer}>
-        {tags.map(({ name, color }) => {
-          return <TodoItem key={name} initName={name} initColor={color} />;
+        {todoList.map((todoItem, i) => {
+          return (
+            <TodoItem
+              key={i}
+              todoItem={todoItem}
+              onIsCompleteChange={(isComplete) => {
+                const newList = todoList.slice();
+                newList[i] = {
+                  ...todoList[i],
+                  isComplete,
+                };
+                setTodoList(newList);
+              }}
+            />
+          );
         })}
       </div>
-      <div>
-        {isAdd ? (
-          <div className={styles.addContainer}>
-            <AddItem addTag={AddTag} />
-          </div>
-        ) : null}
-      </div>
+      {addItemVisible ? (
+        <AddItem
+          onAddItem={(item) => {
+            addItem(item);
+            setAddItemVisible(false);
+          }}
+          onCancel={() => {
+            setAddItemVisible(false);
+          }}
+        />
+      ) : null}
 
       <div className={styles.footer}>
         <div>module</div>

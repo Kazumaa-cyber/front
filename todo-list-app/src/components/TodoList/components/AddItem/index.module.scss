@@ -1,3 +1,13 @@
+.addContainer {
+  width: 240px;
+  height: 80px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  background-color: antiquewhite;
+}
+
 .allEl {
   display: flex;
   justify-content: center;
@@ -6,8 +16,8 @@
 }
 
 .titleContainer {
-    margin-top: 5px;
-    display: inline;
+  margin-top: 5px;
+  display: inline;
   .titleCtx {
     width: 100px;
     height: 20px;
@@ -16,5 +26,4 @@
     font-size: 15px;
     font-weight: bold;
   }
-
 }

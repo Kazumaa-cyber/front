@@ -1,0 +1,10 @@
+.tag {
+  --bg-color: blue;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  min-width: 20%;
+  height: 50%;
+  color: white;
+  margin-right: 50px;
+  margin-left: auto;
+}
