@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from "react";
-import TodoItem from "./components/TodoItem/index";
-import styles from "./App.module.scss";
+import React, { FC, useEffect, useState } from 'react';
+import TodoList from './components/TodoList';
+import styles from './App.module.scss';
 
 // interface TodoItem {
 //   count: int;
@@ -9,21 +9,19 @@ import styles from "./App.module.scss";
 // }
 
 const App = () => {
-  
   const [todoItems, setTodoItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/data/todoItems.json")
+    fetch('http://localhost:3000/data/todoItems.json')
       .then((res) => res.json())
-      .then((res) => {
-      });
+      .then((res) => {});
   }, []);
 
   return (
     <div className={styles.container}>
       <h1>React App</h1>
       <div>Project build by @youxian/cli</div>
-      <TodoItem></TodoItem>
+      <TodoList></TodoList>
     </div>
   );
 };

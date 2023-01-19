@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ColorItem from "../AddItem/components/ColorItem/index";
+import ColorItem from "./components/ColorItem/index";
 
 import styles from "./index.module";
 

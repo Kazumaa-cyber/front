@@ -1,13 +1,13 @@
-import React, { FC, useEffect, useState } from "react";
-import TodoTag from "../TodoItem/components/TodoTag/index.jsx";
-import AddItem from "./components/AddItem/index.jsx";
-import styles from "../TodoItem/index.module";
+import React, { FC, useEffect, useState } from 'react';
+import TodoItem from './components/TodoItem';
+import AddItem from './components/AddItem';
+import styles from './index.module';
 
-const TodoItem = () => {
-  const [title, setTitle] = useState("first");
+const TodoList = () => {
+  const [title, setTitle] = useState('first');
   const [tags, setTags] = useState([
-    { name: "hello", color: "yellow" },
-    { name: "hi", color: "blue" },
+    { name: 'hello', color: 'yellow' },
+    { name: 'hi', color: 'blue' },
   ]);
   const [isAdd, setAdd] = useState(false);
 
@@ -27,7 +27,7 @@ const TodoItem = () => {
 
       <div className={styles.tagContainer}>
         {tags.map(({ name, color }) => {
-          return <TodoTag key={name} initName={name} initColor={color} />;
+          return <TodoItem key={name} initName={name} initColor={color} />;
         })}
       </div>
       <div>
@@ -48,4 +48,4 @@ const TodoItem = () => {
   );
 };
 
-export default TodoItem;
+export default TodoList;
