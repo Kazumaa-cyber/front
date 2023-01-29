@@ -1,46 +1,43 @@
 import React, { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid';
 import AddTodoTag from '../AddTodoTag/index';
 
 import styles from './index.module';
 
 const AddItem = ({ onCancel, onAddItem }) => {
   const [title, setTitle] = useState('');
-  const [color, setColor] = useState('#ffffff');
-  const [typeText, setText] = useState('');
-  const [tags, setTags] = useState([{}]);
+  const [tags, setTags] = useState([]);
 
   const handleTagChange = (tag, i) => {
-    console.log(`handleTagChange ${i}`, tag);
+    // console.log(`handleTagChange ${i}`, tag);
     // const newTags = [...tags];
     const newTags = tags.slice();
-    newTags[i] = tag;
+    newTags[i] = {
+      ...newTags[i],
+      ...tag,
+    };
     setTags(newTags);
   };
 
-  function onAddTag(){
-    const newTags = tags.slice();
-    const length = tags.length;
-    console.log(length)
-    newTags[length]={}
-    setTags(newTags)
+  useEffect(() => {
+    onAddTag();
+  }, []);
+
+  function onAddTag() {
+    setTags([...tags, { uuid: nanoid() }]);
   }
 
-  function handleTagCancel(i){
-    console.log(`handleTagChange ${i}`,i)
-    console.log(`here`,tags)
-    let newTags = tags.slice();
-    let result = newTags.splice(i,1);
-    console.log(`here`,newTags)
+  function handleTagCancel(i) {
+    // console.log(`handleTagChange ${i}`, i);
+    // console.log(`here`, tags);
+    const newTags = tags.slice();
+    newTags.splice(i, 1);
+    // console.log(`here`, newTags);
     setTags(newTags);
   }
 
   function handleTitleChange(e) {
     setTitle(e.target.value);
-  }
-
-  function handleColor(color) {
-    console.log('here', color);
-    setColor(color);
   }
 
   return (
@@ -61,27 +58,26 @@ const AddItem = ({ onCancel, onAddItem }) => {
         <div>
           {tags.map((tag, i) => (
             <AddTodoTag
-              key={i}
+              key={tag.uuid}
               tag={tag}
               onChange={(tag) => handleTagChange(tag, i)}
-              onCancelTag = {()=>handleTagCancel(i)}
+              onCancelTag={() => handleTagCancel(i)}
             ></AddTodoTag>
           ))}
         </div>
 
         <div className={styles.tagChange}>
-          <div onClick={onAddTag}>
-            +
-          </div>
+          <div onClick={onAddTag}>+</div>
         </div>
 
         <div className={styles.buttonContainer}>
           <div onClick={onCancel}>cancel</div>
-          <div onClick={() => {
+          <div
+            onClick={() => {
               onAddItem({ isComplete: false, title, tags });
-            }}>
-              confirm
-
+            }}
+          >
+            confirm
           </div>
         </div>
       </div>

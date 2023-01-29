@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import styles from "./index.module";
-import { SketchPicker } from "react-color";
+import React, { useEffect, useRef, useState } from 'react';
+import styles from './index.module';
+import { SketchPicker } from 'react-color';
+import { useClickOutside } from './useClickOutside';
 
 const AddTodoTag = ({ onChange, onCancelTag }) => {
   const [pickerVisible, setPickerVisible] = useState(false);
-  const [color, setColor] = useState("#aaa");
-  const [name, setName] = useState("");
+  const [color, setColor] = useState('#aaa');
+  const [name, setName] = useState('');
 
   function handleChange(value) {
     const newColor = value.hex;
@@ -19,11 +20,20 @@ const AddTodoTag = ({ onChange, onCancelTag }) => {
     onChange({ name: newName, color });
   }
 
+  const pickerSwitchRef = useRef(null); // { current: xxx }
+  const pickerRef = useRef(null); // { current: xxx }
+  useClickOutside(pickerVisible, pickerRef, (e) => {
+    if (e.target === pickerSwitchRef.current) {
+      return;
+    }
+    setPickerVisible(false);
+  });
+
   return (
     <div className={styles.container}>
       <div>
         <label>
-          Tag:{" "}
+          Tag:{' '}
           <input
             type="text"
             value={name}
@@ -35,6 +45,7 @@ const AddTodoTag = ({ onChange, onCancelTag }) => {
       </div>
 
       <div
+        ref={pickerSwitchRef}
         className={styles.button}
         style={{ background: color }}
         onClick={() => setPickerVisible(!pickerVisible)}
@@ -46,7 +57,9 @@ const AddTodoTag = ({ onChange, onCancelTag }) => {
       ></div>
       <div className={styles.picker}>
         {pickerVisible ? (
-          <SketchPicker color={color} onChange={handleChange} />
+          <div ref={pickerRef}>
+            <SketchPicker color={color} onChange={handleChange} />
+          </div>
         ) : null}
       </div>
     </div>

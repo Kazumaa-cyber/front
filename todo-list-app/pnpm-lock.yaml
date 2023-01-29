@@ -11,6 +11,7 @@ specifiers:
   clean-webpack-plugin: ^4.0.0
   css-loader: ^6.7.1
   html-webpack-plugin: ^5.5.0
+  nanoid: ^4.0.0
   react: ^18.2.0
   react-color: ^2.19.3
   react-colorful: ^5.6.1
@@ -24,6 +25,7 @@ specifiers:
   webpackbar: ^5.0.2
 
 dependencies:
+  nanoid: 4.0.0
   react: 18.2.0
   react-color: 2.19.3_react@18.2.0
   react-colorful: 5.6.1_biqbaboplfbrettd7655fr4n2y
@@ -3121,6 +3123,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
     dev: true
+
+  /nanoid/4.0.0:
+    resolution: {integrity: sha512-IgBP8piMxe/gf73RTQx7hmnhwz0aaEXYakvqZyE302IXW3HyVNhdNGC+O2MwMAVhLEnvXlvKtGbtJf6wvHihCg==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
 
   /negotiator/0.6.3:
     resolution: {integrity: sha512-+EUsqGPLsM+j/zdChZjsnX51g4XrHFOIXwfnCVPGlQk/k5giakcKsuxCObBRu6DSm9opw/O6slWbJdghQM4bBg==}
