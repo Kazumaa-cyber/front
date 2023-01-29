@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import AddTodoTag from './components/AddTodoTag/index';
+import AddTodoTag from '../AddTodoTag/index';
 
 import styles from './index.module';
 
@@ -7,7 +7,7 @@ const AddItem = ({ onCancel, onAddItem }) => {
   const [title, setTitle] = useState('');
   const [color, setColor] = useState('#ffffff');
   const [typeText, setText] = useState('');
-  const [tags, setTags] = useState([{}, {}]);
+  const [tags, setTags] = useState([{}]);
 
   const handleTagChange = (tag, i) => {
     console.log(`handleTagChange ${i}`, tag);
@@ -16,6 +16,23 @@ const AddItem = ({ onCancel, onAddItem }) => {
     newTags[i] = tag;
     setTags(newTags);
   };
+
+  function onAddTag(){
+    const newTags = tags.slice();
+    const length = tags.length;
+    console.log(length)
+    newTags[length]={}
+    setTags(newTags)
+  }
+
+  function handleTagCancel(i){
+    console.log(`handleTagChange ${i}`,i)
+    console.log(`here`,tags)
+    let newTags = tags.slice();
+    let result = newTags.splice(i,1);
+    console.log(`here`,newTags)
+    setTags(newTags);
+  }
 
   function handleTitleChange(e) {
     setTitle(e.target.value);
@@ -47,19 +64,25 @@ const AddItem = ({ onCancel, onAddItem }) => {
               key={i}
               tag={tag}
               onChange={(tag) => handleTagChange(tag, i)}
+              onCancelTag = {()=>handleTagCancel(i)}
             ></AddTodoTag>
           ))}
         </div>
 
-        <div>
-          <button onClick={onCancel}>cancel</button>
-          <button
-            onClick={() => {
+        <div className={styles.tagChange}>
+          <div onClick={onAddTag}>
+            +
+          </div>
+        </div>
+
+        <div className={styles.buttonContainer}>
+          <div onClick={onCancel}>cancel</div>
+          <div onClick={() => {
               onAddItem({ isComplete: false, title, tags });
-            }}
-          >
-            confirm
-          </button>
+            }}>
+              confirm
+
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { ITodoTag } from '../../types/todo';
+import { ITodoTag } from '../../../../types/todo';
 
 import styles from './index.module.scss';
 

@@ -1,16 +1,30 @@
 .RowContainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 36px;
   border-radius: 10px;
   background-color: beige;
   min-width: 240px;
 
-  .checkStyle {
-    margin-left: 10px;
+  .leftContainer{
+    display: flex;
+
   }
 
-  .titleStyle {
-    margin-left: 10px;
+  .rightContainer{
+    display: flex;
+    margin-right: 10px;
+    gap:10px;
+    overflow: scroll;
   }
+
+}
+
+.checkStyle{
+  margin-left: 10px;
+}
+
+.titleStyle{
+  margin-left: 10px;
 }

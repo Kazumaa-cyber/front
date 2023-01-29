@@ -1,6 +1,5 @@
 .itemContainer {
   border-radius: 10px;
-  border: 1px solid black;
   background-color: bisque;
   max-width: 600px;
   min-width: 300px;
@@ -10,6 +9,15 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
+  .upContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .tagContainer {

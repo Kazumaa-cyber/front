@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import TodoTag from '../../../TodoTag';
-import styles from './index.module.scss';
+import React, { useEffect, useState } from "react";
+import TodoTag from "../TodoTag";
+import styles from "./index.module.scss";
 
 // interface TodoTag {
 //   isComplete:boolean
@@ -18,18 +18,23 @@ const TodoItem = ({ todoItem, onIsCompleteChange }) => {
 
   return (
     <div className={styles.RowContainer}>
-      <label>
-        <input
-          type="checkbox"
-          checked={todoItem.isComplete}
-          className={styles.checkStyle}
-          onChange={handleChange}
-        />
-      </label>
-      <div className={styles.titleStyle}>{todoItem.title}</div>
-      {todoItem.tags.map((tag, i) => (
-        <TodoTag key={`${tag}-${i}`} tag={tag} />
-      ))}
+      <div className={styles.leftContainer}>
+        <label>
+          <input
+            type="checkbox"
+            checked={todoItem.isComplete}
+            className={styles.checkStyle}
+            onChange={handleChange}
+          />
+        </label>
+        <div className={styles.titleStyle}>{todoItem.title}</div>
+      </div>
+
+      <div className={styles.rightContainer}>
+        {todoItem.tags.map((tag, i) => (
+          <TodoTag key={`${tag}-${i}`} tag={tag} />
+        ))}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,38 @@
+.container {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 3px;
+
+  .picker {
+    position: absolute;
+    left:190px;
+    z-index: 9;
+  }
+
+  .button{
+    border: 1px solid beige;
+    border-radius: 10px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .cancelTag{
+    align-self: flex-start;
+    width: 16px;
+    border: 1px solid beige;
+    border-radius: 8px;
+    height: 5px;
+    position: relative;
+    top:3px;
+  }
+  
+
+  .typeCtx {
+    width: 100px;
+    height: 20px;
+    border: 1px solid beige;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
