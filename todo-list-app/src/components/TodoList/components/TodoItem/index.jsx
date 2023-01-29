@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
-import TodoTag from "../TodoTag";
-import styles from "./index.module.scss";
+import React, { useEffect, useRef, useState } from 'react';
+import classNames from 'classnames';
+import TodoTag from '../TodoTag';
+import styles from './index.module.scss';
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 // interface TodoTag {
 //   isComplete:boolean
@@ -8,7 +10,29 @@ import styles from "./index.module.scss";
 //   color?: string;
 // }
 
+const customClassNames = (...names) => {
+  return names
+    .map((name) => {
+      if (typeof name === 'string') return name;
+      if (typeof name === 'object' && name !== null) {
+        return Object.entries()
+          .map(([name, enable]) => {
+            if (enable) {
+              return name;
+            } else {
+              return '';
+            }
+          })
+          .join(' ');
+      }
+      return name;
+    })
+    .join(' ');
+};
+
 const TodoItem = ({ todoItem, onIsCompleteChange }) => {
+  const [active, setActive] = useState(false);
+
   // const todoItem = todoList[i]
   function handleChange() {
     const newIsComplete = !todoItem.isComplete;
@@ -16,8 +40,17 @@ const TodoItem = ({ todoItem, onIsCompleteChange }) => {
     // todoList[i].isComplete = newIsComplete;
   }
 
+  const containerRef = useRef(null);
+  useClickOutside(active, containerRef, () => {
+    setActive(false);
+  });
+
   return (
-    <div className={styles.RowContainer}>
+    <div
+      ref={containerRef}
+      onClick={() => setActive(true)}
+      className={classNames(styles.RowContainer, { [styles.active]: active })}
+    >
       <div className={styles.leftContainer}>
         <label>
           <input

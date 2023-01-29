@@ -1,17 +1,21 @@
-import React, { FC, useEffect, useState } from "react";
-import TodoItem from "./components/TodoItem";
-import AddItem from "./components/AddItem";
-import styles from "./index.module";
-import { useTodoList } from "./hooks/useTodoList";
-import { useCounter } from "./hooks/useCounter";
-import { useCompleteCount } from "./hooks/useCompleteCount";
+import React, { FC, useEffect, useState } from 'react';
+import TodoItem from './components/TodoItem';
+import AddItem from './components/AddItem';
+import styles from './index.module';
+import { useTodoList } from './hooks/useTodoList';
+import { useCounter } from './hooks/useCounter';
+import { useCompleteCount } from './hooks/useCompleteCount';
+
+const f2 = () => {
+  // xxxx;
+};
 
 const TodoList = () => {
-  const [title, setTitle] = useState("first");
+  const [title, setTitle] = useState('first');
   const [count, setCount] = useCounter();
-  const [completeCount,setCompleteCount] = useCompleteCount(0);
+  const [completeCount, setCompleteCount] = useCompleteCount(0);
   const [todoList, setTodoList] = useTodoList();
-  console.log("todoList", todoList);
+  console.log('todoList', todoList);
 
   const [addItemVisible, setAddItemVisible] = useState(false);
 
@@ -20,7 +24,7 @@ const TodoList = () => {
   }
 
   function addItem(item) {
-    console.log("item", item);
+    console.log('item', item);
     setTodoList([...todoList, item]);
   }
 
@@ -29,7 +33,9 @@ const TodoList = () => {
       <div className={styles.upContainer}>
         <div>
           <h3>{title}</h3>
-          <h3>{completeCount}/{count}</h3>
+          <h3>
+            {completeCount}/{count}
+          </h3>
         </div>
 
         <div className={styles.tagContainer}>
@@ -44,10 +50,10 @@ const TodoList = () => {
                     ...todoList[i],
                     isComplete,
                   };
-                  if(isComplete){
-                    setCompleteCount(completeCount+1);
-                  }else{
-                    setCompleteCount(completeCount-1);
+                  if (isComplete) {
+                    setCompleteCount(completeCount + 1);
+                  } else {
+                    setCompleteCount(completeCount - 1);
                   }
                   setTodoList(newList);
                 }}
@@ -62,7 +68,7 @@ const TodoList = () => {
           <AddItem
             onAddItem={(item) => {
               addItem(item);
-              setCount(count+1);
+              setCount(count + 1);
               setAddItemVisible(false);
             }}
             onCancel={() => {

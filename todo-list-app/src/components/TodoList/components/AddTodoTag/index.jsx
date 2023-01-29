@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './index.module';
 import { SketchPicker } from 'react-color';
-import { useClickOutside } from './useClickOutside';
+import { useClickOutside } from '../../hooks/useClickOutside';
 
 const AddTodoTag = ({ onChange, onCancelTag }) => {
   const [pickerVisible, setPickerVisible] = useState(false);

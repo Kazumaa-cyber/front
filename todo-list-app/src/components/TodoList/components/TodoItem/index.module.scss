@@ -4,26 +4,33 @@
   justify-content: space-between;
   height: 36px;
   border-radius: 10px;
-  background-color: beige;
+  // background-color: beige;
   min-width: 240px;
 
-  .leftContainer{
-    display: flex;
-
+  &:hover {
+    transition: background-color 150ms ease-in;
+    background-color: #ddd;
   }
 
-  .rightContainer{
+  &.active {
+    outline: 1px solid rgb(174, 222, 241);
+  }
+
+  .leftContainer {
+    display: flex;
+  }
+
+  .rightContainer {
     display: flex;
     margin-right: 10px;
-    gap:10px;
+    gap: 10px;
   }
-
 }
 
-.checkStyle{
+.checkStyle {
   margin-left: 10px;
 }
 
-.titleStyle{
+.titleStyle {
   margin-left: 10px;
 }
